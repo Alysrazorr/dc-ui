@@ -1,0 +1,147 @@
+.box-shadow {
+  box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1); }
+
+.card-shadow {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
+
+.clearfix:after {
+  content: ' ';
+  display: block;
+  height: 0;
+  width: 0;
+  clear: both;
+  visibility: hidden; }
+
+.pull-left {
+  float: left !important; }
+
+.pull-right {
+  float: right !important; }
+
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.rotate-n90 {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.rotate-n180 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+
+html, body {
+  font-family: "Microsoft YaHei", "Times New Roman";
+  color: #333;
+  background-color: #ddd; }
+
+*.dui {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", "Times New Roman"; }
+
+div.float-container > * {
+  float: left; }
+
+button.dui.dui-button {
+  padding: 0 30px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: box-shadow 300ms, background-color 300ms;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333; }
+  button.dui.dui-button:active {
+    background-color: #d9d9d9; }
+  button.dui.dui-button.sea {
+    background-color: #4269a5;
+    color: #fff; }
+    button.dui.dui-button.sea:active {
+      background-color: #2c466e; }
+    button.dui.dui-button.sea:hover, button.dui.dui-button.sea:focus {
+      box-shadow: 0 0 0 3px rgba(74, 117, 183, 0.5);
+      border-color: #3e629a; }
+  button.dui.dui-button.grass {
+    background-color: #39825a;
+    color: #fff; }
+    button.dui.dui-button.grass:active {
+      background-color: #224d35; }
+    button.dui.dui-button.grass:hover, button.dui.dui-button.grass:focus {
+      box-shadow: 0 0 0 3px rgba(65, 148, 102, 0.5);
+      border-color: #347753; }
+  button.dui.dui-button.orange {
+    background-color: #f0ad4e;
+    color: #fff; }
+    button.dui.dui-button.orange:active {
+      background-color: #df8a13; }
+    button.dui.dui-button.orange:hover, button.dui.dui-button.orange:focus {
+      box-shadow: 0 0 0 3px rgba(242, 184, 102, 0.5);
+      border-color: #efa640; }
+  button.dui.dui-button.fire {
+    background-color: #dc6141;
+    color: #fff; }
+    button.dui.dui-button.fire:active {
+      background-color: #b03e20; }
+    button.dui.dui-button.fire:hover, button.dui.dui-button.fire:focus {
+      box-shadow: 0 0 0 3px rgba(224, 115, 87, 0.5);
+      border-color: #da5634; }
+
+input.dui.dui-textbox {
+  padding: 0 10px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: box-shadow 300ms, color 300ms, background-color 300ms; }
+  input.dui.dui-textbox:hover, input.dui.dui-textbox:focus, input.dui.dui-textbox.active {
+    box-shadow: 0 0 0 3px rgba(196, 196, 196, 0.7);
+    border-color: #2b2b2b; }
+  input.dui.dui-textbox.sea:active {
+    background-color: #2c466e; }
+  input.dui.dui-textbox.sea:hover, input.dui.dui-textbox.sea:focus, input.dui.dui-textbox.sea.active {
+    color: #4269a5;
+    box-shadow: 0 0 0 3px rgba(92, 131, 190, 0.7);
+    border-color: #3e629a;
+    background-color: #a5badb; }
+  input.dui.dui-textbox.grass:active {
+    background-color: #224d35; }
+  input.dui.dui-textbox.grass:hover, input.dui.dui-textbox.grass:focus, input.dui.dui-textbox.grass.active {
+    color: #39825a;
+    box-shadow: 0 0 0 3px rgba(73, 165, 115, 0.7);
+    border-color: #347753;
+    background-color: #89cba7; }
+  input.dui.dui-textbox.orange:active {
+    background-color: #df8a13; }
+  input.dui.dui-textbox.orange:hover, input.dui.dui-textbox.orange:focus, input.dui.dui-textbox.orange.active {
+    color: #f0ad4e;
+    box-shadow: 0 0 0 3px rgba(244, 195, 125, 0.7);
+    border-color: #efa640;
+    background-color: #fceedb; }
+  input.dui.dui-textbox.fire:active {
+    background-color: #b03e20; }
+  input.dui.dui-textbox.fire:hover, input.dui.dui-textbox.fire:focus, input.dui.dui-textbox.fire.active {
+    color: #dc6141;
+    box-shadow: 0 0 0 3px rgba(228, 133, 108, 0.7);
+    border-color: #da5634;
+    background-color: #f4ccc2; }
+
+/*# sourceMappingURL=dui.css.map */

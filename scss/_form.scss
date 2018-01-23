@@ -1,0 +1,32 @@
+@mixin input-style($color) {
+    &:active {
+        background-color: darken($color, 15%);
+    }
+    &:hover, &:focus, &.active {
+        color: $color;
+        box-shadow: 0 0 0 3px rgba(lighten($color, 10%), 0.7);
+        border-color: darken($color, 3%);
+        background-color: lighten($color, 30%);
+    }
+}
+
+input.dui {
+    &.dui-textbox {
+        padding: 0 10px;
+        height: 40px;
+        font-size: 15px;
+        border-radius: 3px;
+        background-color: $color-f;
+        transition: box-shadow $transition-speed, color $transition-speed, background-color $transition-speed;
+
+        &:hover, &:focus, &.active {
+            box-shadow: 0 0 0 3px rgba(lighten($color-border, 10%), 0.7);
+            border-color: darken($color-character, 3%);
+        }
+
+        &.sea { @include input-style($color-sea); }
+        &.grass { @include input-style($color-grass); }
+        &.orange { @include input-style($color-orange); }
+        &.fire { @include input-style($color-fire); }
+    }
+}

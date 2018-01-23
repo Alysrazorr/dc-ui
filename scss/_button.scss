@@ -1,0 +1,35 @@
+@mixin button-style($color) {
+    background-color: $color;
+    color: $color-f;
+
+    &:active {
+        background-color: darken($color, 15%);
+    }
+    &:hover, &:focus {
+        box-shadow: 0 0 0 3px rgba(lighten($color, 5%), 0.5);
+        border-color: darken($color, 3%);
+    }
+}
+
+button.dui {
+    &.dui-button {
+        padding: 0 30px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 15px;
+        transition: box-shadow $transition-speed, background-color $transition-speed;
+
+        border-radius: 3px;
+        background-color: $color-f;
+        color: $color-character;
+
+        &:active {
+            background-color: darken($color-f, 15%);
+        }
+
+        &.sea { @include button-style($color-sea); }
+        &.grass { @include button-style($color-grass); }
+        &.orange { @include button-style($color-orange); }
+        &.fire { @include button-style($color-fire); }
+    }
+}

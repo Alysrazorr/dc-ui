@@ -1,0 +1,137 @@
+﻿$color-0: #000;
+$color-1: #111;
+$color-2: #222;
+$color-3: #333;
+$color-4: #444;
+$color-5: #555;
+$color-6: #666;
+$color-7: #777;
+$color-8: #888;
+$color-9: #999;
+$color-a: #aaa;
+$color-b: #bbb;
+$color-c: #ccc;
+$color-d: #ddd;
+$color-e: #eee;
+$color-f: #fff;
+
+$color-sea: rgb(66,105,165);
+$color-grass: rgb(57,130,90);
+$color-orange: #f0ad4e;
+$color-fire: rgb(220,97,65);
+
+$color-character: $color-3; 
+$color-border: $color-a;
+$color-border-active: $color-7;
+
+// $color-primary: #428bca;
+// $color-success: #5cb85c;
+// $color-warning: #f0ad4e;
+// $color-info: #5bc0de;
+// $color-info: rgb(91, 212, 222);
+// $color-danger: #d9534f;
+
+$font-size: 14px;
+$font-family: 'Microsoft YaHei', 'Times New Roman';
+
+$transition-speed: 300ms;
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+@mixin content-box {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+@mixin box-shadow {
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow {
+    @include box-shadow;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow {
+    @include card-shadow;
+}
+
+@mixin zero {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+@mixin clearfix {
+    &:after {
+        content: ' ';
+        display: block;
+        height: 0;
+		width: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+@mixin rotate($angle) {
+	-webkit-transform: rotate($angle);
+       -moz-transform: rotate($angle);
+        -ms-transform: rotate($angle);
+            transform: rotate($angle);
+}
+
+.rotate-90 {
+	@include rotate(90deg);
+}
+
+.rotate-n90 {
+	@include rotate(-90deg);
+}
+
+.rotate-180 {
+	@include rotate(180deg);
+}
+
+.rotate-n180 {
+	@include rotate(-180deg);
+}
+
+html, body {
+	font-family: $font-family;
+    color: $color-3;
+    background-color: $color-d;
+}
+
+*.dui {
+	@include zero;
+	@include border-box;
+	font-family: $font-family;
+}
+
+div.float-container {
+    &>* {
+        float: left;
+    }
+}

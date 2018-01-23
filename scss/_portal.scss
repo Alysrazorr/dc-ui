@@ -1,0 +1,87 @@
+﻿$color-header: rgb(244,244,244);
+// $color-header: rgb(25,25,25);
+$color-header-underline1:#6987ab;
+$color-header-underline2:#0082d7;
+$color-header-underline3:#98d5ff;
+$color-header-underline4:#F89101;
+$color-header-underline5:#ff3133;
+$color-header-underline6:#01a23c;
+
+$height-header: 70px;
+$height-header-underline: 6px;
+
+div.aface.aface-container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+body.aface.aface-portal {
+    &>header.aface.aface-portal-header {
+        z-index: 2;
+        position: relative;
+        height: $height-header;
+        background-color: $color-header;
+        box-shadow: 0 0 100px rgba($color-3, 0.5);
+
+        &>div.aface.aface-portal-header-container {
+            width: 1280px;
+            height: $height-header - $height-header-underline;
+            margin: 0 auto;
+        }
+        &>div.aface.aface-portal-header-underline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            &>div {
+                height: $height-header-underline;
+                width: 12.5%;
+                float: left;
+                &:nth-child(1) {
+                    background-color: $color-header-underline1;
+                }
+                &:nth-child(2) {
+                    background-color: $color-header-underline2;
+                }
+                &:nth-child(3) {
+                    background-color: $color-header-underline3;
+                }
+                &:nth-child(4) {
+                    background-color: $color-header-underline4;
+                }
+                &:nth-child(5) {
+                    background-color: $color-header-underline5;
+                }
+                &:nth-child(6) {
+                    background-color: $color-header-underline6;
+                }
+                &:nth-child(7) {
+                    background-color: $color-header-underline2;
+                }
+                &:nth-child(8) {
+                    background-color: $color-header-underline1;
+                }
+            }
+        }
+    }
+    &>nav.aface.aface-portal-navbar {
+        z-index: 1;
+        height: 150px;
+        background-color: $color-f;
+        &>div.aface.aface-container>div.aface.aface-portal-navbar-brand {
+            height: 150px;
+            width: 300px;
+            float: left;
+            background-color: $color-3;
+        }
+        &>div.aface.aface-container>div.aface.aface-portal-navbar-menu {
+            height: 150px;
+            width: calc(100% - 300px);
+            float: left;
+            background-color: $color-9;
+        }
+    }
+    &>nav.aface.aface-portal-slider {
+        position: relative;
+    }
+}

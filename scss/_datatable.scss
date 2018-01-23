@@ -1,0 +1,107 @@
+$datatable-line-height: 40px;
+$datatable-header-height: $datatable-line-height;
+$datatable-border-color: $color-border;
+$datatable-header-bg-color: $color-bg;
+$datatable-checkbox-height: 14px;
+$datatable-pagination-item-height: 30px;
+
+div.aface.datatable-container {
+    &>table.aface.datatable {
+        background-color: $datatable-border-color;
+        border-spacing: 1px;
+        width: 100%;
+
+        input[type="checkbox"] {
+            display: block;
+            height: $datatable-checkbox-height;
+            line-height: $datatable-checkbox-height;
+            width: $datatable-checkbox-height;
+            text-align: center;
+        }
+        &>thead {
+            &>tr {
+                &>th.aface.header {
+                    text-align: left;
+                    font-size: 15px;
+                    padding: 10px;
+                    background-color: $datatable-header-bg-color;
+                }
+            }
+        }
+        &>tbody {
+            &>tr {
+                &>td.aface.content {
+                    word-break: break-word;
+                    font-size: 13px;
+                    padding: 10px;
+                    background-color: $color-f;
+
+                    &.ellipsis {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                &:hover {
+                    &>td {
+                        background-color: $datatable-header-bg-color !important;
+                    }
+                }
+            }
+        }
+
+        &>tfoot {
+            &>tr {
+                &>td {
+                    @include zero;
+                    height: $datatable-line-height;
+                    background-color: $color-f;
+                    &>div.aface.pagination {
+                        float: right;
+                        margin-right: 5px;
+                        &>a.aface.pagination {
+                            display: block;
+                            float: left;
+                            margin-left: 5px;
+                            text-align: center;
+                            width: $datatable-pagination-item-height;
+                            height: $datatable-pagination-item-height;
+                            line-height: $datatable-pagination-item-height;
+                            font-size: 13px;
+                            color: $color-steel;
+
+                            &:hover, &.active {
+                                color: $color-f;
+                                background-color: $color-steel;
+                            }
+                            &>i.fa {
+                                font-size: 18px;
+                                width: $datatable-pagination-item-height;
+                                height: $datatable-pagination-item-height;
+                                line-height: $datatable-pagination-item-height;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    &>span.aface.pagination {
+                        display: block;
+                        float: left;
+                        height: $datatable-pagination-item-height;
+                        line-height: $datatable-pagination-item-height;
+                        margin-left: 5px;
+                        font-size: 12px;
+                    }
+                    &>select.aface.pagination {
+                        @include border-box;
+                        outline: none;
+                        margin-left: 5px;
+                        float: left;
+                        height: $datatable-pagination-item-height;
+                        line-height: $datatable-pagination-item-height;
+                        border: solid 1px $datatable-border-color;
+                    }
+                }
+            }
+        }
+    }
+}
